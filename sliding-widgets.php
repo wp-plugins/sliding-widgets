@@ -4,7 +4,7 @@ Plugin Name: Sliding Widgets
 Plugin URI: http://wpeden.com/
 Description: Sliding Widgets - WordPlress Plugin to create sliding widget area dynamically
 Author: codename065
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://wpeden.com/
 */
 
