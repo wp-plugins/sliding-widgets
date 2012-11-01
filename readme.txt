@@ -1,5 +1,5 @@
 === Sliding Widgets ===
-Contributors: Shaon
+Contributors: codename065
 Donate link:  
 Tags: widget, sidebar, widgets, sliding widget, sliding widgets, slider, sliding panel
 Requires at least: 2.0.2
@@ -25,6 +25,9 @@ WordPress Sliding Widgets Plugin will help your to create a sliding panel dynami
 2. Settings page
 
 == Changelog ==
+
+= 1.0.1 =
+* adjusted "px" issue with height and width
 
 = 1.0.0 =
 * initial release

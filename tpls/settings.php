@@ -105,9 +105,9 @@ font-family: 'Lucida Grande',Arial;
    
    <div class="wrap">
    <div class="icon32" id="icon-tools"><br></div>
-   <h2>Sliding Widgets</h2> <br>
-   
+   <h2>Sliding Widgets <a class="add-new-h2" href="http://wpeden.com/product/wordpress-sliding-widget-area/">Get pro for creating multiple (unlimited) sliding widget area</a></h2> <br>
    <div style="clear: both;"></div>
+   <div style="float: left;width: 500px;">
    <form action="" method="post" id="wptb">
     <input type="hidden" name="action" value="wpbs_save_settings">
     
@@ -172,12 +172,12 @@ font-family: 'Lucida Grande',Arial;
 <tr><td>
 
 <label>Control box width</label><br>
-<input type="text" name="wpbs__opt[icon_box_width]" value="<?php echo $icon_box_width; ?>" size="20" />
+<input type="text" name="wpbs__opt[icon_box_width]" value="<?php echo $icon_box_width; ?>" size="10" />px
 
 </td><td>
 
 <label>Control box height</label><br>
-<input type="text" name="wpbs__opt[icon_box_height]" value="<?php echo $icon_box_height; ?>" size="20" />
+<input type="text" name="wpbs__opt[icon_box_height]" value="<?php echo $icon_box_height; ?>" size="10" />px
 
 </td></tr>
 <tr><td>
@@ -194,35 +194,35 @@ font-family: 'Lucida Grande',Arial;
 </td><td>
 
 <label id="spos_box1"><?php if($position=="left" || position=="right") echo "Top";else echo "Left";?></label><br>
-<input type="text" name="wpbs__opt[spos]" value="<?php if(!empty($spos))echo $spos;else echo "50"; ?>" size="10" />
+<input type="text" name="wpbs__opt[spos]" value="<?php if(!empty($spos))echo $spos;else echo "50"; ?>" size="10" />px
 
 </td></tr>
 <tr><td>
 
 <label>Sticky</label><br>
 
-<select name="wpbs__opt[sticky]">
-<option value="yes" <?php if($sticky=="yes") echo 'selected="selected"';?>>yes</option>
-<option value="no" <?php if($sticky=="no") echo 'selected="selected"';?>>no</option>
+<select name="wpbs__opt[sticky]" style="width: 70px;">
+<option value="yes" <?php if($sticky=="yes") echo 'selected="selected"';?>>Yes</option>
+<option value="no" <?php if($sticky=="no") echo 'selected="selected"';?>>No</option>
 </select>
 
 </td><td>
 
 <label>Background color</label><br>
-<input type="text" id="bg_colorbox" name="wpbs__opt[bg]" value="<?php echo $bg; ?>" size="20" /><br />
+<input type="text" id="bg_colorbox" name="wpbs__opt[bg]" value="<?php echo $bg; ?>" size="10" /><br />
 <label>Text color</label><br>
-<input type="text" id="text_colorbox" name="wpbs__opt[text_color]" value="<?php echo $text_color; ?>" size="20" />
+<input type="text" id="text_colorbox" name="wpbs__opt[text_color]" value="<?php echo $text_color; ?>" size="10" />
 
 </td></tr>
 <tr><td>
 
 <label>Box width</label><br>
-<input type="text" name="wpbs__opt[width]" value="<?php echo $width; ?>" size="20" />
+<input type="text" name="wpbs__opt[width]" value="<?php echo $width; ?>" size="10" />px
 
 </td><td>
 
 <label>Box Height</label><br>
-<input type="text" name="wpbs__opt[height]" value="<?php echo $height; ?>" size="20" />
+<input type="text" name="wpbs__opt[height]" value="<?php echo $height; ?>" size="10" />px
 
 </td></tr>
 <!--<tr><td colspan="2">
@@ -263,7 +263,15 @@ font-family: 'Lucida Grande',Arial;
     
     
  
-    </form>
+    </form>  
+    </div> 
+    <div  style="float: right;width: 350px;">
+    <a href="http://wpeden.com/minimax-wordpress-page-layout-builder-plugin/?ref=slidingwidget" style="width:97%;overflow:hidden;margin:5px;background: #fafafa;border: 1px solid #ccc;display: block;float: left;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;" ><h3 style="margin: 0px;background: #ccc;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;padding:5px;text-decoration: none;color:#333">Drag & Drop Page Layout Builder</h3><img src="<?php echo plugins_url('pricing-table/images/minimax.png'); ?>" /></a>
+   <a href="http://www.wpdownloadmanager.com/?ref=slidingwidget" style="width:97%;overflow:hidden;margin:5px;background: #fafafa;border: 1px solid #ccc;display: block;float: left;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;" ><h3 style="margin: 0px;background: #ccc;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;padding:5px;text-decoration: none;color:#333">WordPress Download Manager Pro</h3><img src="<?php echo plugins_url('pricing-table/images/wpdm.png'); ?>" /></a>
+   <a href="http://www.wpmarketplaceplugin.com/?ref=slidingwidget" style="width:97%;overflow:hidden;margin:5px;background: #fafafa;border: 1px solid #ccc;display: block;float: left;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;" ><h3 style="margin: 0px;background: #ccc;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;padding:5px;text-decoration: none;color:#333">WordPress Marketplace Plugin</h3><img vspace="12" src="<?php echo plugins_url('pricing-table/images/wpmp.png'); ?>" /></a>
+   <a href="http://wpeden.com/?ref=slidingwidget" style="width:97%;overflow:hidden;margin:5px;background: #fafafa;border: 1px solid #ccc;display: block;float: left;text-align: center;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;" ><h3 style="margin: 0px;background: #ccc;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;padding:5px;text-decoration: none;color:#333">WordPress Themes & Plugins Collection</h3><img src="<?php echo plugins_url('pricing-table/images/wpeden.png'); ?>" /></a>
+   <div style="clear: both;"></div>
+   </div>
      <br>
      <br>
      
