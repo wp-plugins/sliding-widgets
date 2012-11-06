@@ -44,10 +44,16 @@
        height:<?php echo ($icon_box_width);?>px;
     }
     
+    #wpbs__cont .widgettitle{
+        font-size:10pt;
+        font-weight: bold;
+    }
     #wpbs__cont{
         color:<?php echo $text_color;?>;
     }
     .widgetcont{
         padding-left: 10px;
+        padding-right: 10px;
+        font-size:9pt;
     }
 </style>
