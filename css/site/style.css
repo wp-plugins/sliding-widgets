@@ -107,4 +107,6 @@ border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
     }
     
-    
+#wpbs__cont .widgettitle{
+    font-weight: bold;     
+}    

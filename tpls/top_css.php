@@ -6,6 +6,9 @@
         -moz-border-radius-bottomright: 6px;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
+        border-top-right-radius: 0px !important;  
+        -webkit-border-top-right-radius: 0px !important;
+        -moz-border-radius-topright: 0px !important;    
         position: <?php if($sticky=="yes")echo "fixed";else echo "absolute";?>;
         /*top:0px;*/
         top:-<?php echo ($height);?>px;
@@ -30,5 +33,15 @@
     }
     #wpbs__cont{
         color:<?php echo $text_color;?>;
+        -webkit-border-bottom-left-radius: 0px;
+        -webkit-border-bottom-right-radius: 6px;
+        -moz-border-radius-bottomleft: 0px;
+        -moz-border-radius-bottomright: 6px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 0px !important;  
+        -webkit-border-top-right-radius: 0px !important;
+        -moz-border-radius-topright: 0px !important;    
+        padding-left: 10px;         
     }
 </style>

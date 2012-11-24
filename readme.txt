@@ -26,6 +26,9 @@ WordPress Sliding Widgets Plugin will help your to create a sliding panel dynami
 
 == Changelog ==
 
+= 1.0.3 =
+* adjusted css with top and bottom positioning
+
 = 1.0.2 =
 * adjusted css issue for text widget, left and right widget areas
 

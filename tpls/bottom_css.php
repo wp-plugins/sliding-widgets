@@ -22,6 +22,8 @@
     #wpbs__cont{
         margin-top:<?php echo $icon_box_height;?>px;
         color:<?php echo $text_color;?>;
+        padding-left: 10px;
+        padding-top: 10px;
     }
     .icon_label{
         
