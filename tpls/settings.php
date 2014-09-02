@@ -249,7 +249,7 @@
     </div> 
     <div  style="float: right;width: 350px;">
         <a href="http://wpeden.com/" class="promo" target="_blank"><h3>WordPress Themes & Plugins Collection</h3><img src="<?php echo plugins_url('sliding-widgets/images/wpeden.png'); ?>" /></a>
-        <a href="http://wpeden.com/wpeden-club/" class="promo" target="_blank"><h3>WordPress Themes & Plugins Club</h3><span style="padding:10px;display: block;">WP Eden Club! Download all of our club themes and plugins only for $55 !</span></a>
+        <a href="http://liveform.org/" class="promo" target="_blank"><h3>Drag & Drop Form Builder</h3><img vspace="12" src="<?php echo plugins_url('sliding-widgets/images/liveform.png'); ?>" /></a>
         <a href="http://wpeden.com/minimax-wordpress-page-layout-builder-plugin/" class="promo" target="_blank"><h3>Drag & Drop Page Layout Builder</h3><img src="<?php echo plugins_url('sliding-widgets/images/minimax.png'); ?>" /></a>
         <a href="http://www.wpdownloadmanager.com/" class="promo" target="_blank"><h3>WordPress Download Manager Pro</h3><img src="<?php echo plugins_url('sliding-widgets/images/wpdm.png'); ?>" /></a>
         
