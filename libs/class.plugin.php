@@ -43,15 +43,6 @@ class ahm_plugin{
         }
     }
     
-    function load_modules(){       
-        $mdir = $this->plugin_dir.'/modules/';
-        
-        $files = scandir($mdir);
-        foreach($files as $file){
-            if(!is_dir($file)&&end(explode(".",$file))=='php')
-            include($mdir.$file);
-        }
-    }
     
     function action(){
         

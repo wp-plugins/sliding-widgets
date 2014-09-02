@@ -94,18 +94,18 @@
         z-index:99999;   
     }
     
-    #___plus_0,#wpbs__cont_g1 iframe{
+#___plus_0,#wpbs__cont_g1 iframe{
         width: 290px !important;
         height: 560px !important;
         overflow: hidden;
         background: #fff;
         -webkit-border-top-right-radius: 5px;
--webkit-border-bottom-right-radius: 5px;
--moz-border-radius-topright: 5px;
--moz-border-radius-bottomright: 5px;
-border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
-    }
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+}
     
 #wpbs__cont .widgettitle{
     font-weight: bold;     
