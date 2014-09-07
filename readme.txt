@@ -3,7 +3,7 @@ Contributors: codename065, shahriar0822
 Donate link:  http://wpeden.com
 Tags: widget, sidebar, widgets, sliding widget, sliding widgets, slider, sliding panel
 Requires at least: 3.5
-Tested up to: 3.9
+Tested up to: 4.0
  
  
 
