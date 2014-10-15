@@ -26,6 +26,10 @@ WordPress Sliding Widgets Plugin will help your to create a sliding panel dynami
 
 == Changelog ==
 
+= 1.3.0 = 
+* Updated minor settings css
+* Directory restriction issue solved
+
 = 1.2.0 = 
 * Compatibility release for wp 3.9
 

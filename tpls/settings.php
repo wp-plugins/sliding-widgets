@@ -18,10 +18,11 @@
        width: 100%;
    }
    /*.box_tbl td select, */
-   .box_tbl td input{
-       padding: 3px;
-       font-size: 10pt;        
-       font-family: 'Lucida Grande',Arial;
+   .box_tbl td input,.box_tbl td select{
+        padding: 3px;
+        font-family: "Open Sans",Arial;
+        font-size: 1em;
+        border-radius: 3px;
    }
    #wptb{
        width: 600px;
@@ -30,7 +31,7 @@
    }
    
    .sbox{
-       border:1px solid #B09CED;
+       border:2px solid #dedede;
        -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
@@ -134,7 +135,9 @@
    
 <div class="wrap">
     <div class="icon32" id="icon-tools"><br></div>
-    <h2>Sliding Widgets <a class="add-new-h2" href="http://wpeden.com/product/wordpress-sliding-widget-area/">Get PRO for creating multiple (unlimited) sliding widget area and more features</a></h2> <br>
+    <h2>Sliding Widgets <a target="_blank" class="add-new-h2" href="https://wordpress.org/support/view/plugin-reviews/sliding-widgets#postform">A 5* rating at wp.org will be very inspiring :)</a></h2> 
+    <h2><a target="_blank" class="add-new-h2" href="http://wpeden.com/product/wordpress-sliding-widget-area/">Get PRO for creating multiple (unlimited) sliding widget area and more features</a></h2> 
+    <br>
     <div style="clear: both;"></div>
     <div style="float: left;width: 500px;">
     <form action="" method="post" id="wptb">
@@ -169,34 +172,34 @@
         <table cellpadding="5" cellspacing="0" border="0" class="box_tbl">
         <tr>
             <td colspan="2">
-            <label>Icon url</label><br>
+            <label>Icon URL</label><br>
             <input type="text" name="wpbs__opt[icon_url]" value="<?php echo $icon_url; ?>" size="62" />
             </td>
         </tr>
         
         <tr>
             <td>
-            <label>Control box width</label><br>
-            <input type="text" name="wpbs__opt[icon_box_width]" value="<?php echo $icon_box_width; ?>" size="10" />px
+            <label>Control Box Width</label><br>
+            <input type="text" name="wpbs__opt[icon_box_width]" value="<?php echo $icon_box_width; ?>" size="10" /> PX
             </td>
             <td>
-            <label>Control box height</label><br>
-            <input type="text" name="wpbs__opt[icon_box_height]" value="<?php echo $icon_box_height; ?>" size="10" />px
+            <label>Control Box Height</label><br>
+            <input type="text" name="wpbs__opt[icon_box_height]" value="<?php echo $icon_box_height; ?>" size="10" /> PX
             </td>
         </tr>
         <tr>
             <td>
             <label>Position</label><br>
             <select class="ps" rel="box1" name="wpbs__opt[position]">
-            <option value="left" <?php if($position=="left") echo 'selected="selected"';?>>left</option>
-            <option value="right" <?php if($position=="right") echo 'selected="selected"';?>>right</option>
-            <option value="top" <?php if($position=="top") echo 'selected="selected"';?>>top</option>
-            <option value="bottom" <?php if($position=="bottom") echo 'selected="selected"';?>>bottom</option>
+            <option value="left" <?php if($position=="left") echo 'selected="selected"';?>>Left</option>
+            <option value="right" <?php if($position=="right") echo 'selected="selected"';?>>Right</option>
+            <option value="top" <?php if($position=="top") echo 'selected="selected"';?>>Top</option>
+            <option value="bottom" <?php if($position=="bottom") echo 'selected="selected"';?>>Bottom</option>
             </select>
             </td>
             <td>
             <label id="spos_box1"><?php if($position=="left" || position=="right") echo "Top";else echo "Left";?></label><br>
-            <input type="text" name="wpbs__opt[spos]" value="<?php if(!empty($spos))echo $spos;else echo "50"; ?>" size="10" />px
+            <input type="text" name="wpbs__opt[spos]" value="<?php if(!empty($spos))echo $spos;else echo "50"; ?>" size="10" /> PX
             </td>
         </tr>
         <tr>
@@ -208,20 +211,20 @@
             </select>
             </td>
             <td>
-            <label>Background color</label><br>
+            <label>Background Color</label><br>
             <input type="text" id="bg_colorbox" name="wpbs__opt[bg]" value="<?php echo $bg; ?>" size="10" /><br />
-            <label>Text color</label><br>
+            <label>Text Color</label><br>
             <input type="text" id="text_colorbox" name="wpbs__opt[text_color]" value="<?php echo $text_color; ?>" size="10" />
             </td>
         </tr>
         <tr>
             <td>
-            <label>Box width</label><br>
-            <input type="text" name="wpbs__opt[width]" value="<?php echo $width; ?>" size="10" />px
+            <label>Box Width</label><br>
+            <input type="text" name="wpbs__opt[width]" value="<?php echo $width; ?>" size="10" /> PX
             </td>
             <td>
             <label>Box Height</label><br>
-            <input type="text" name="wpbs__opt[height]" value="<?php echo $height; ?>" size="10" />px
+            <input type="text" name="wpbs__opt[height]" value="<?php echo $height; ?>" size="10" /> PX
             </td>
         </tr>
         
@@ -246,7 +249,10 @@
         <br clear="all" />
     
     </form>  
-    </div> 
+    </div>
+    
+    
+    
     <div  style="float: right;width: 350px;">
         <a href="http://wpeden.com/" class="promo" target="_blank"><h3>WordPress Themes & Plugins Collection</h3><img src="<?php echo plugins_url('sliding-widgets/images/wpeden.png'); ?>" /></a>
         <a href="http://liveform.org/" class="promo" target="_blank"><h3>Drag & Drop Form Builder</h3><img vspace="12" src="<?php echo plugins_url('sliding-widgets/images/liveform.png'); ?>" /></a>
