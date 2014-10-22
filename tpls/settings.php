@@ -173,32 +173,32 @@
         <tr>
             <td colspan="2">
             <label>Icon URL</label><br>
-            <input type="text" name="wpbs__opt[icon_url]" value="<?php echo $icon_url; ?>" size="62" />
+            <input type="text" name="wpbs__opt[icon_url]" value="<?php echo !empty($icon_url) ? $icon_url : ''; ?>" size="62" />
             </td>
         </tr>
         
         <tr>
             <td>
             <label>Control Box Width</label><br>
-            <input type="text" name="wpbs__opt[icon_box_width]" value="<?php echo $icon_box_width; ?>" size="10" /> PX
+            <input type="text" name="wpbs__opt[icon_box_width]" value="<?php echo !empty($icon_box_width) ? $icon_box_width : ''; ?>" size="10" /> PX
             </td>
             <td>
             <label>Control Box Height</label><br>
-            <input type="text" name="wpbs__opt[icon_box_height]" value="<?php echo $icon_box_height; ?>" size="10" /> PX
+            <input type="text" name="wpbs__opt[icon_box_height]" value="<?php echo !empty($icon_box_height) ? $icon_box_height : ''; ?>" size="10" /> PX
             </td>
         </tr>
         <tr>
             <td>
             <label>Position</label><br>
             <select class="ps" rel="box1" name="wpbs__opt[position]">
-            <option value="left" <?php if($position=="left") echo 'selected="selected"';?>>Left</option>
-            <option value="right" <?php if($position=="right") echo 'selected="selected"';?>>Right</option>
-            <option value="top" <?php if($position=="top") echo 'selected="selected"';?>>Top</option>
-            <option value="bottom" <?php if($position=="bottom") echo 'selected="selected"';?>>Bottom</option>
+            <option value="left" <?php if(!empty($position) && $position == "left") echo 'selected="selected"';?>>Left</option>
+            <option value="right" <?php if(!empty($position) && $position == "right") echo 'selected="selected"';?>>Right</option>
+            <option value="top" <?php if(!empty($position) && $position == "top") echo 'selected="selected"';?>>Top</option>
+            <option value="bottom" <?php if(!empty($position) && $position == "bottom") echo 'selected="selected"';?>>Bottom</option>
             </select>
             </td>
             <td>
-            <label id="spos_box1"><?php if($position=="left" || position=="right") echo "Top";else echo "Left";?></label><br>
+            <label id="spos_box1"><?php if(!empty($position) && ($position=="left" || position=="right")) echo "Top";else echo "Left";?></label><br>
             <input type="text" name="wpbs__opt[spos]" value="<?php if(!empty($spos))echo $spos;else echo "50"; ?>" size="10" /> PX
             </td>
         </tr>
@@ -206,31 +206,31 @@
             <td>
             <label>Sticky</label><br>
             <select name="wpbs__opt[sticky]" style="width: 70px;">
-            <option value="yes" <?php if($sticky=="yes") echo 'selected="selected"';?>>Yes</option>
-            <option value="no" <?php if($sticky=="no") echo 'selected="selected"';?>>No</option>
+                <option value="yes" <?php if(!empty($sticky) && $sticky == "yes") echo 'selected="selected"';?>>Yes</option>
+            <option value="no" <?php if(!empty($sticky) && $sticky == "no") echo 'selected="selected"';?>>No</option>
             </select>
             </td>
             <td>
             <label>Background Color</label><br>
-            <input type="text" id="bg_colorbox" name="wpbs__opt[bg]" value="<?php echo $bg; ?>" size="10" /><br />
+            <input type="text" id="bg_colorbox" name="wpbs__opt[bg]" value="<?php echo !empty($bg) ? $bg : ''; ?>" size="10" /><br />
             <label>Text Color</label><br>
-            <input type="text" id="text_colorbox" name="wpbs__opt[text_color]" value="<?php echo $text_color; ?>" size="10" />
+            <input type="text" id="text_colorbox" name="wpbs__opt[text_color]" value="<?php echo !empty($text_color) ? $text_color : ''; ?>" size="10" />
             </td>
         </tr>
         <tr>
             <td>
             <label>Box Width</label><br>
-            <input type="text" name="wpbs__opt[width]" value="<?php echo $width; ?>" size="10" /> PX
+            <input type="text" name="wpbs__opt[width]" value="<?php echo !empty($width) ? $width : ''; ?>" size="10" /> PX
             </td>
             <td>
             <label>Box Height</label><br>
-            <input type="text" name="wpbs__opt[height]" value="<?php echo $height; ?>" size="10" /> PX
+            <input type="text" name="wpbs__opt[height]" value="<?php echo !empty($height) ? $height : ''; ?>" size="10" /> PX
             </td>
         </tr>
         
         <tr>
             <td colspan="2">
-            <input type="checkbox" name="wpbs__opt[disable]" value="1" <?php if($disable==1)echo 'checked="checked"'; else echo '';?>> Disable/Hide
+                <input type="checkbox" name="wpbs__opt[disable]" value="1" <?php if(!empty($disable) && $disable == 1)echo 'checked="checked"'; else echo '';?>> Disable/Hide
             </td>
         </tr>
         </table>

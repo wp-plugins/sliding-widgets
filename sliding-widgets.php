@@ -4,7 +4,7 @@ Plugin Name: Sliding Widgets
 Plugin URI: http://wpeden.com/
 Description: Sliding Widgets - WordPlress Plugin to create sliding widget area dynamically
 Author: codename065
-Version: 1.3.0
+Version: 1.4.0
 Author URI: http://wpeden.com/
 */
 
@@ -13,69 +13,69 @@ include("libs/class.plugin.php");
  
 
 $wpbs_plugindir = str_replace('\\','/',dirname(__FILE__));
- 
-$wpbs_plugin = new ahm_plugin(end(explode('/',$wpbs_plugindir)));
 
-define('wpbs__DIR',$wpbs__plugindir); 
+$parray = explode('/',$wpbs_plugindir);
+
+$wpbs_plugin = new ahm_plugin(end($parray));
+
+//define('wpbs__DIR',$wpbs__plugindir); 
 
 function wpbs_header(){
     $wssopt = get_option('wpbs_opt');
-    extract($wssopt);
-    if(!$disable){
-           
-        ?>
-    <style type="text/css">
-    /********* common css for all box********/
-    #wpbs__cont{
-        width: <?php echo $width;?>px;
-        height: <?php echo $height;?>px;
-        background:<?php echo $bg;?>;
-        -webkit-border-top-right-radius: 6px;
-        -webkit-border-bottom-right-radius: 6px;
-        -moz-border-radius-topright: 6px;
-        -moz-border-radius-bottomright: 6px;
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
-        z-index:999999;
-        
-        /*padding:5px;*/
+    
+    if($wssopt != FALSE){
+        extract($wssopt);
+        if(empty($disable) || $disable != 1 ){ ?>
+            <style type="text/css">
+            /********* common css for all box********/
+            #wpbs__cont{
+                width: <?php echo $width;?>px;
+                height: <?php echo $height;?>px;
+                background:<?php echo $bg;?>;
+                -webkit-border-top-right-radius: 6px;
+                -webkit-border-bottom-right-radius: 6px;
+                -moz-border-radius-topright: 6px;
+                -moz-border-radius-bottomright: 6px;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+                z-index:999999;
+            }
+
+            #wpbs__cont iframe{
+                -webkit-border-top-right-radius: 6px;
+                -webkit-border-bottom-right-radius: 6px;
+                -moz-border-radius-topright: 6px;
+                -moz-border-radius-bottomright: 6px;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+                margin-top: 3px;
+            } 
+            </style>
+
+            <?php 
+            //include the css file for the left,right,bottom and top
+            if($position == '') $pos = "left"; else $pos = $position;
+            include("tpls/".$pos."_css.php");
+        }
     }
-     
-    #wpbs__cont iframe{
-        -webkit-border-top-right-radius: 6px;
-        -webkit-border-bottom-right-radius: 6px;
-        -moz-border-radius-topright: 6px;
-        -moz-border-radius-bottomright: 6px;
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
-        margin-top: 3px;
-    } 
-    
-    </style>
-    
-    <?php 
-    //include the css file for the left,right,bottom and top
-    if($position=='')$pos="left";else $pos=$position;
-    include("tpls/".$pos."_css.php");
-        
-    }
-    
 }
 
 function wpbs_widget_area(){
     $wssopt = get_option('wpbs_opt',array());
-    extract($wssopt);
-    if(!$disable){ 
-    
-     register_sidebar(array(
-                    'name'          => 'Sliding Widget',
-                    'id'            => 'wliding-widget',
-                    'description'   => '',
-                    'class'         => '',
-                    'before_widget' => '<div id="sbox1" class="widget %2$s">',
-                    'after_widget'  => '</div>',
-                    'before_title'  => '<h2 class="widgettitle">',
-                    'after_title'   => '</h2>' ));
+    if($wssopt != FALSE){
+        extract($wssopt);
+        if(empty($disable) || $disable != 1){ 
+
+        register_sidebar(array(
+                        'name'          => 'Sliding Widget',
+                        'id'            => 'wliding-widget',
+                        'description'   => '',
+                        'class'         => '',
+                        'before_widget' => '<div id="sbox1" class="widget %2$s">',
+                        'after_widget'  => '</div>',
+                        'before_title'  => '<h2 class="widgettitle">',
+                        'after_title'   => '</h2>' ));
+        }
     }
 }
  
@@ -83,21 +83,18 @@ function wpbs_widget_area(){
 function wpbs_sliders(){
     //get the box settings and info
     $wssopt = get_option('wpbs_opt');
-    extract($wssopt);
- if(!$disable){ 
-        
-            
-    if(empty($spos))$spos= 50;
-    if(empty($icon_box_width))$icon_box_width= 100;
-    if(empty($icon_box_height))$icon_box_height= 100;
-    if($position=='')$pos="left";else $pos=$position;
-    
-    // the slider div in appropriate file like left div is in left.php,right in right.php ..
-    include("tpls/".$pos.".php");
-    
-       
+    if($wssopt != FALSE){
+        extract($wssopt);
+        if(!$disable){ 
+            if(empty($spos))$spos= 50;
+            if(empty($icon_box_width))$icon_box_width= 100;
+            if(empty($icon_box_height))$icon_box_height= 100;
+            if($position=='')$pos="left";else $pos=$position;
+
+            // the slider div in appropriate file like left div is in left.php,right in right.php ..
+            include("tpls/".$pos.".php");
+        }
     }
-    
 }
 
 
