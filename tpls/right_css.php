@@ -10,8 +10,7 @@
         top:<?php echo ($spos);?>px;
         right:-<?php echo $width;?>px;
         width:<?php echo ($width+$icon_box_width);?>px;;
-        height:<?php echo ($icon_box_height);?>px;
-       
+        height:<?php echo ($icon_box_height);?>px;       
         background: <?php echo $bg;?> url('<?php echo $icon_url;?>')  no-repeat;
         background-position: 3px 5px;
         cursor: pointer;
@@ -33,14 +32,9 @@
         border-bottom-left-radius: 5px;
     }
     .icon_label{
-        
-        color: <?php echo $label_color;?>;
+       color: <?php echo $label_color;?>;
        float: left;
-       /*padding: 10px <?php echo ($icon_box_width/8);?>px 10px <?php echo ($icon_box_width/8);?>px ;*/
-       /*-webkit-transform: rotate(-270deg); 
-       -moz-transform: rotate(-270deg);*/ 
        position:relative;
-      /* top: <?php echo ($icon_box_height/2);?>px */
        width: <?php echo $icon_box_width;?>px;       
        height: <?php echo $icon_box_height;?>px;
     }

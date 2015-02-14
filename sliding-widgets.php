@@ -1,24 +1,19 @@
 <?php 
 /*
 Plugin Name: Sliding Widgets
-Plugin URI: http://wpeden.com/
+Plugin URI: http://wpeden.com/product/wordpress-sliding-widget-area/
 Description: Sliding Widgets - WordPlress Plugin to create sliding widget area dynamically
 Author: codename065
-Version: 1.4.0
+Version: 1.4.1
 Author URI: http://wpeden.com/
 */
 
- 
 include("libs/class.plugin.php");
  
-
 $wpbs_plugindir = str_replace('\\','/',dirname(__FILE__));
-
 $parray = explode('/',$wpbs_plugindir);
-
 $wpbs_plugin = new ahm_plugin(end($parray));
-
-//define('wpbs__DIR',$wpbs__plugindir); 
+error_reporting(0);
 
 function wpbs_header(){
     $wssopt = get_option('wpbs_opt');

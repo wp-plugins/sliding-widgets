@@ -10,25 +10,17 @@
         top:<?php echo ($spos);?>px;
         left:-<?php echo $width;?>px;
         width:<?php echo ($width+$icon_box_width);?>px;
-        height:<?php echo ($icon_box_height);?>px;
-       
+        height:<?php echo ($icon_box_height);?>px;       
         background: <?php echo $bg;?> url('<?php echo $icon_url;?>')  no-repeat;
         background-position: <?php echo ($width+3);?>px 5px;
         cursor: pointer;
-        z-index:999999;
-                                                        
+        z-index:999999;                                                       
     }
      
     .icon_label{                
        color: <?php echo $label_color;?>;
        float: right;
-      /* -webkit-transform: rotate(-90deg); 
-       -moz-transform: rotate(-90deg);   */
-       /*padding: 10px <?php echo ($icon_box_width/8);?>px 10px <?php echo ($icon_box_width/8);?>px ;*/
        position:relative;
-       /*top: <?php echo ($icon_box_height/2);?>px;*/    
-       /*top:<?php echo ($spos+15);?>px;*/
-       /*left:25px;*/
        font-size: 12pt; 
        font-weight: bold;
        width: <?php echo $icon_box_width;?>px;       
@@ -36,8 +28,7 @@
     }
     .wpbs_handle{
        padding-top: 5px;
-       position: absolute;         
-        
+       position: absolute;        
        top:-<?php echo ($spos);?>px;
        left:-<?php echo $icon_box_height/2;?>px;
        width:<?php echo ($icon_box_height);?>px;
