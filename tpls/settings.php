@@ -2,146 +2,15 @@
     $wssopt = get_option('wpbs_opt',array());
     extract($wssopt);
 ?>
-<style type="text/css">
-   .inm{
-       padding-left: 10px;
-       color: #008000;
-       font-weight: bold;
-   }
-   .button-primary{
-       -webkit-border-radius: 5px !important;
-        -moz-border-radius: 5px !important;
-        border-radius: 5px !important;
-   }
-    
-   .box_tbl{
-       width: 100%;
-   }
-   /*.box_tbl td select, */
-   .box_tbl td input,.box_tbl td select{
-        padding: 3px;
-        font-family: "Open Sans",Arial;
-        font-size: 1em;
-        border-radius: 3px;
-   }
-   #wptb{
-       width: 600px;
-       min-width: 600px;
-       font-family: 'Lucida Grande',Arial;    
-   }
-   
-   .sbox{
-       border:2px solid #dedede;
-       -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        background: #fafafa;
-        margin-bottom: 5px;
-   }
-   .sbox .hndle{
-        margin: 0px;
-        padding: 7px;
-        background: #c1bfea;
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyOSUiIHN0b3AtY29sb3I9IiNjMWJmZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3NCUiIHN0b3AtY29sb3I9IiNkOGQwZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top,  #c1bfea 29%, #d8d0ef 74%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(29%,#c1bfea), color-stop(74%,#d8d0ef));
-        background: -webkit-linear-gradient(top,  #c1bfea 29%,#d8d0ef 74%);
-        background: -o-linear-gradient(top,  #c1bfea 29%,#d8d0ef 74%);
-        background: -ms-linear-gradient(top,  #c1bfea 29%,#d8d0ef 74%);
-        background: linear-gradient(to bottom,  #c1bfea 29%,#d8d0ef 74%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1bfea', endColorstr='#d8d0ef',GradientType=0 );
-        -webkit-border-top-left-radius: 4px;
-        -webkit-border-top-right-radius: 4px;
-        -moz-border-radius-topleft: 4px;
-        -moz-border-radius-topright: 4px;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        border-bottom:1px solid #B09CED;
-        font-weight: normal;
-        font-family: 'Lucida Grande', 'Segoe UI';
-        text-shadow: 1px 1px 1px #fff;
-        cursor:pointer;
-    } 
-    .sbcont{
-        padding: 7px;
-    }
-   .remv_box{
-        float: right;
-        margin-top: -2px;
-      /* background: rgba(200,0,0,0.7);*/
-        color: black;
-        border: 0px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        cursor: pointer;
-        background: #bab4ea;
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyOCUiIHN0b3AtY29sb3I9IiNiYWI0ZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNjOGM0ZWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top,  #bab4ea 28%, #c8c4eb 75%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(28%,#bab4ea), color-stop(75%,#c8c4eb));
-        background: -webkit-linear-gradient(top,  #bab4ea 28%,#c8c4eb 75%);
-        background: -o-linear-gradient(top,  #bab4ea 28%,#c8c4eb 75%);
-        background: -ms-linear-gradient(top,  #bab4ea 28%,#c8c4eb 75%);
-        background: linear-gradient(to bottom,  #bab4ea 28%,#c8c4eb 75%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bab4ea', endColorstr='#c8c4eb',GradientType=0 );
-        border: 1px solid #B09CED;
-        padding: 0px 3px;
-    }   
-    .toff{
-       border-bottom: 0px !important;
-       -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-   } 
-    .add_box{
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px; 
-        padding: 5px !important;
-        font-family: 'Lucida Grande',Arial;
-   }
-   .promo{
-       width:97%;
-       overflow:hidden;
-       margin:5px;
-       background: #fafafa;
-       border: 1px solid #ccc;
-       display: block;
-       float: left;
-       text-align: center;
-       -webkit-border-radius: 6px;
-       -moz-border-radius: 6px;
-       border-radius: 6px;
-       text-decoration:none;
-   }
-   .promo h3{
-       margin: 0px;
-       background: #ccc;
-       -webkit-border-top-left-radius: 5px;
-       -webkit-border-top-right-radius: 5px;
-       -moz-border-radius-topleft: 5px;
-       -moz-border-radius-topright: 5px;
-       border-top-left-radius: 5px;
-       border-top-right-radius: 5px;
-       padding:5px;
-       text-decoration: none;
-       color:#333
-   }
-    .promo img{
-        padding-top: 10px;
-        padding-bottom: 10px
-    }
-</style>
    
 <div class="wrap">
-    <div class="icon32" id="icon-tools"><br></div>
     <h2>Sliding Widgets <a target="_blank" class="add-new-h2" href="https://wordpress.org/support/view/plugin-reviews/sliding-widgets#postform">A 5* rating at wp.org will be very inspiring :)</a></h2> 
     <h2><a target="_blank" class="add-new-h2" href="http://wpeden.com/product/wordpress-sliding-widget-area/">Get PRO for creating multiple (unlimited) sliding widget area and more features</a></h2> 
     <br>
     <div style="clear: both;"></div>
     <div style="float: left;width: 500px;">
     <form action="" method="post" id="wptb">
-        <input type="hidden" name="action" value="wpbs_save_settings">
+        <input type="hidden" name="action" value="wpsw_save_settings">
         <div class="inside">
         <div class="boxdiv">
 
@@ -178,6 +47,13 @@
         </tr>
         
         <tr>
+            <td colspan="2">
+            <label>Icon Label (You can keep it empty if you want)</label><br>
+            <input type="text" name="wpbs__opt[icon_label]" value="<?php echo !empty($icon_label) ? $icon_label : ''; ?>" size="62" />
+            </td>
+        </tr>
+        
+        <tr>
             <td>
             <label>Control Box Width</label><br>
             <input type="text" name="wpbs__opt[icon_box_width]" value="<?php echo !empty($icon_box_width) ? $icon_box_width : ''; ?>" size="10" /> PX
@@ -198,7 +74,7 @@
             </select>
             </td>
             <td>
-            <label id="spos_box1"><?php if(!empty($position) && ($position=="left" || position=="right")) echo "Top";else echo "Left";?></label><br>
+            <label id="spos_box1"><?php if(!empty($position) && ($position=="left" || position=="right")) echo "Distance from Top";else echo "Distance from Left";?></label><br>
             <input type="text" name="wpbs__opt[spos]" value="<?php if(!empty($spos))echo $spos;else echo "50"; ?>" size="10" /> PX
             </td>
         </tr>
@@ -256,7 +132,7 @@
     <div  style="float: right;width: 350px;">
         <a href="http://wpeden.com/" class="promo" target="_blank"><h3>WordPress Themes & Plugins Collection</h3><img src="<?php echo plugins_url('sliding-widgets/images/wpeden.png'); ?>" /></a>
         <a href="http://liveform.org/" class="promo" target="_blank"><h3>Drag & Drop Form Builder</h3><img vspace="12" src="<?php echo plugins_url('sliding-widgets/images/liveform.png'); ?>" /></a>
-        <a href="http://wpeden.com/minimax-wordpress-page-layout-builder-plugin/" class="promo" target="_blank"><h3>Drag & Drop Page Layout Builder</h3><img src="<?php echo plugins_url('sliding-widgets/images/minimax.png'); ?>" /></a>
+        <a href="http://wpeden.com/product/minimax-page-layout-builder/" class="promo" target="_blank"><h3>Drag & Drop Page Layout Builder</h3><img src="<?php echo plugins_url('sliding-widgets/images/plb.png'); ?>" /></a>
         <a href="http://www.wpdownloadmanager.com/" class="promo" target="_blank"><h3>WordPress Download Manager Pro</h3><img src="<?php echo plugins_url('sliding-widgets/images/wpdm.png'); ?>" /></a>
         
         <div style="clear: both;"></div>
@@ -269,7 +145,7 @@
 <br clear="all" />
 <br clear="all" />
     
-<script language="JavaScript">
+<script>
 
     window.onload=changeps;
     function changeps(){
@@ -281,9 +157,9 @@
     }
     jQuery('.ps').live("change",function(){        
         if(jQuery(this).val()=="left"||jQuery(this).val()=="right"){
-            jQuery('#spos_'+jQuery(this).attr("rel")).text("Top");
+            jQuery('#spos_'+jQuery(this).attr("rel")).text("Distance from Top");
         }else{
-            jQuery('#spos_'+jQuery(this).attr("rel")).text("Left");
+            jQuery('#spos_'+jQuery(this).attr("rel")).text("Distance from Left");
         }        
     });
 

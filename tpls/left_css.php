@@ -11,8 +11,9 @@
         left:-<?php echo $width;?>px;
         width:<?php echo ($width+$icon_box_width);?>px;
         height:<?php echo ($icon_box_height);?>px;       
-        background: <?php echo $bg;?> url('<?php echo $icon_url;?>')  no-repeat;
-        background-position: <?php echo ($width+3);?>px 5px;
+        background: <?php echo $bg;?> url('<?php echo $icon_url;?>') center no-repeat;
+        background-size: <?php echo ($icon_box_height-10);?>px <?php echo ($icon_box_height-10);?>px;
+        background-position: <?php echo ($width+$icon_box_width-$icon_box_height+5);?>px 5px;
         cursor: pointer;
         z-index:999999;                                                       
     }
@@ -27,12 +28,9 @@
        height: <?php echo $icon_box_height;?>px;       
     }
     .wpbs_handle{
-       padding-top: 5px;
-       position: absolute;        
-       top:-<?php echo ($spos);?>px;
-       left:-<?php echo $icon_box_height/2;?>px;
-       width:<?php echo ($icon_box_height);?>px;
-       height:<?php echo ($icon_box_width);?>px;
+       padding: 5px;
+       line-height: <?php echo $icon_box_height-10;?>px;
+       color: <?php echo $text_color;?>;
     }
     
     #wpbs__cont .widgettitle{
@@ -43,8 +41,7 @@
         color:<?php echo $text_color;?>;
     }
     .widgetcont{
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 10px;
         font-size:9pt;
     }
 </style>

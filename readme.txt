@@ -3,7 +3,7 @@ Contributors: codename065, shahriar0822
 Donate link:  http://wpeden.com
 Tags: widget, sidebar, widgets, sliding widget, sliding widgets, slider, sliding panel
 Requires at least: 3.5
-Tested up to: 4.1
+Tested up to: 4.2
  
  
 
@@ -25,6 +25,11 @@ WordPress Sliding Widgets Plugin will help your to create a sliding panel dynami
 2. Settings page
 
 == Changelog ==
+
+= 1.4.2 =
+* Added option to set Text Label 
+* Code optimization
+* WP 4.2 Compatibility Tested
 
 = 1.4.1 = 
 * Minor css update
